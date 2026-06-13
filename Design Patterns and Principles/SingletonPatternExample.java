@@ -28,9 +28,9 @@ class Test{
         Logger logger1= Logger.getInstance();
         Logger logger2= Logger.getInstance();
        if (logger1 == logger2) {
-            System.out.println("✅ PASS: Same instance confirmed.");
+            System.out.println(" PASS: Same instance confirmed.");
         } else {
-            System.out.println("❌ FAIL: Different instances found!");
+            System.out.println(" FAIL: Different instances found!");
         }
         
      }

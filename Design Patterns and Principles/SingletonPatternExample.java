@@ -1,10 +1,10 @@
-class Logger{
-    private static Logger instance = new Logger();
+ final class Logger{
+    private static final Logger INSTANCE = new Logger();
     private Logger(){
 
     }
     public static Logger getInstance(){
-        return instance;
+        return INSTANCE;
     }
     public void log( String message){
         System.out.println("LOG "+message);
@@ -20,6 +20,18 @@ public class SingletonPatternExample{
         logger2.log("user logged in ");
          System.out.println(logger1==logger2);
 
+        
+     }
+}
+class Test{
+     public static void main(String[] args){
+        Logger logger1= Logger.getInstance();
+        Logger logger2= Logger.getInstance();
+       if (logger1 == logger2) {
+            System.out.println("✅ PASS: Same instance confirmed.");
+        } else {
+            System.out.println("❌ FAIL: Different instances found!");
+        }
         
      }
 }

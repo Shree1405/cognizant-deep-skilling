@@ -1,0 +1,29 @@
+package Inventory_Management_System.code;
+
+public class Product {
+
+    int productId;
+    String productName;
+    int quantity;
+    double price;
+
+    public Product(int productId,
+                   String productName,
+                   int quantity,
+                   double price) {
+
+        this.productId = productId;
+        this.productName = productName;
+        this.quantity = quantity;
+        this.price = price;
+    }
+
+    @Override
+    public String toString() {
+
+        return "Product ID : " + productId +
+               "\nProduct Name : " + productName +
+               "\nQuantity : " + quantity +
+               "\nPrice : ₹" + price;
+    }
+}

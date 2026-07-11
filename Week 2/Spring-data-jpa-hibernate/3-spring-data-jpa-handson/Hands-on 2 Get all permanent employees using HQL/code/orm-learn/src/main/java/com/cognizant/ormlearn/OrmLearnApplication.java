@@ -30,17 +30,20 @@ public class OrmLearnApplication implements CommandLineRunner {
         testGetAllPermanentEmployees();
     }
 
-    private void testGetAllPermanentEmployees() {
+   private void testGetAllPermanentEmployees() {
 
-        LOGGER.info("Start");
+    LOGGER.info("Start");
 
-        List<Employee> employees = employeeService.getAllPermanentEmployees();
+    List<Employee> employees = employeeService.getAllPermanentEmployees();
 
-        LOGGER.debug("Permanent Employees : {}", employees);
+    employees.forEach(employee -> 
+        LOGGER.debug("Employee Id: {}, Name: {}, Salary: {}, Department: {}",
+                employee.getId(),
+                employee.getName(),
+                employee.getSalary(),
+                employee.getDepartment().getName())
+    );
 
-        employees.forEach(employee ->
-                LOGGER.debug("Skills : {}", employee.getSkillList()));
-
-        LOGGER.info("End");
-    }
+    LOGGER.info("End");
+}
 }

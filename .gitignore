@@ -1,9 +1,23 @@
+# Maven
 target/
-.classpath
+
+# Eclipse / STS
 .project
+.classpath
 .settings/
+.metadata/
+.springBeans
+.sts4-cache
+
+# IntelliJ IDEA
 .idea/
-.vscode/
 *.iml
+
+# VS Code
+.vscode/
+
+# macOS
 .DS_Store
-/.metadata/
+
+# Logs
+*.log
